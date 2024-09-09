@@ -1,0 +1,62 @@
+[
+    {
+        "bookId": "B101",
+        "title": "Introduction to Web Development",
+        "author": "Debt Main",
+        "pages": "300",
+        "rating": 4.5,
+        "category": "Web Development",
+        "price": "$50",
+        "book_image": "https://via.placeholder.com/100"
+    },
+    {
+        "bookId": "B102",
+        "title": "Advanced JavaScript",
+        "author": "Jane Smith",
+        "pages": "250",
+        "rating": 4.7,
+        "category": "Programming",
+        "price": "$45",
+        "book_image": "https://via.placeholder.com/100"
+    },
+    {
+        "bookId": "B103",
+        "title": "Data Structures and Algorithms",
+        "author": "Mike Johnson",
+        "pages": "400",
+        "rating": 4.6,
+        "category": "Computer Science",
+        "price": "$60",
+        "book_image": "https://via.placeholder.com/100"
+    },
+    {
+        "bookId": "B104",
+        "title": "Understanding Databases",
+        "author": "Emily Davis",
+        "pages": "350",
+        "rating": 4.4,
+        "category": "Database",
+        "price": "$55",
+        "book_image": "https://via.placeholder.com/100"
+    },
+    {
+        "bookId": "B105",
+        "title": "Machine Learning Basics",
+        "author": "David Brown",
+        "pages": "320",
+        "rating": 4.8,
+        "category": "Machine Learning",
+        "price": "$70",
+        "book_image": "https://via.placeholder.com/100"
+    },
+    {
+        "bookId": "B106",
+        "title": "Introduction to AI",
+        "author": "Sarah Wilson",
+        "pages": "280",
+        "rating": 4.5,
+        "category": "Artificial Intelligence",
+        "price": "$65",
+        "book_image": "https://via.placeholder.com/100"
+    }
+]

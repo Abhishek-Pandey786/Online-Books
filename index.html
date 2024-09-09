@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="heading">Books Collection</h1>
+            <p>Fetch and display a list of books from either a local JSON file or a remote API. Sort, filter, and paginate the book list.</p>
+        </header>
+
+        <section class="controls">
+            <button class="fetchButton" id="fetch-local">Fetch Local Books</button>
+            <button class="fetchButton" id="fetch-remote">Fetch Remote Books</button>
+        </section>
+
+        <section class="filter-controls">
+            <label for="sort">Sort By:</label>
+            <select id="sort">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="rating">Rating</option>
+            </select>
+
+            <label for="category">Filter By Category:</label>
+            <input type="text" id="category" placeholder="Category">
+        </section>
+
+        <section class="booklist-container">
+            <div class="booklist" id="booklist">
+                <div class="loading" id="loading">Loading . . .</div>
+            </div>
+
+            <div class="pagination" id="pagination"></div>
+        </section>
+
+        <section class="signup">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit" class="fetchButton">Sign Up</button>
+                <div id="signup-message"></div>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
