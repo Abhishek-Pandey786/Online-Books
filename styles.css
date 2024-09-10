@@ -1,154 +1,182 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
     padding: 20px;
 }
 
-.container {
+.main-container {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.header {
+h1 {
     text-align: center;
+    color: #2c3e50;
     margin-bottom: 20px;
 }
 
-.heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-.controls, .filter-controls {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.fetchButton {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    color: #fff;
-    background-color: #007BFF;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin: 0 10px;
-}
-
-.fetchButton:hover {
-    background-color: #0056b3;
-}
-
-.filter-controls {
+.actions {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
 }
 
-.filter-controls label, .filter-controls select, .filter-controls input {
+label {
+    font-size: 1.1rem;
+    font-weight: 500;
     margin-right: 10px;
 }
 
-.booklist-container {
-    width: 100%;
-    margin: auto;
+select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
-.booklist {
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #bdc3c7;
+}
+
+.booklist-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .single-book {
-    display: flex;
-    align-items: center;
+    background-color: #ffffff;
+    width: 23%;
     padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .single-book:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.book-image {
-    border-radius: 5px;
+.single-book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .book-info {
-    margin-left: 15px;
-}
-
-.book-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.book-author {
-    font-size: 1rem;
-    font-style: italic;
-    margin: 5px 0;
-}
-
-.book-desc {
     margin-top: 10px;
-    font-size: 0.875rem;
-    color: #555;
+}
+
+.book-info h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
 }
 
 .loading {
-    text-align: center;
-    font-size: 1.25rem;
-    padding: 20px;
-    color: #888;
-}
-
-.pagination {
+    font-size: 1.5rem;
+    color: #3498db;
     text-align: center;
     margin: 20px 0;
 }
 
-.signup {
-    margin-top: 50px;
-    max-width: 500px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
+.signup-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.signup h2 {
+.signup-form h2 {
     text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-.signup form {
+.signup-form form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.signup input {
+.signup-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.signup-form input, .signup-form select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
-.signup button {
-    margin-top: 10px;
+.signup-form button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #27ae60;
+}
+
+.form-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #e74c3c;
+    text-align: center;
 }

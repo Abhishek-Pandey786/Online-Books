@@ -5,57 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 class="heading">Books Collection</h1>
-            <p>Fetch and display a list of books from either a local JSON file or a remote API. Sort, filter, and paginate the book list.</p>
-        </header>
+    <div class="main-container">
+        <h1>Online Book List</h1>
+        <div id="signedInAs" class="signed-in" style="display: none;"></div>
 
-        <section class="controls">
-            <button class="fetchButton" id="fetch-local">Fetch Local Books</button>
-            <button class="fetchButton" id="fetch-remote">Fetch Remote Books</button>
-        </section>
+        <!-- Sorting, Filtering, and Fetching -->
+        <div class="actions">
+            <label for="filterCategory">Filter by Category:</label>
+            <select id="filterCategory">
+                <option value="all">All Categories</option>
+                <option value="fiction">Fiction</option>
+                <option value="nonfiction">Non-fiction</option>
+            </select>
 
-        <section class="filter-controls">
-            <label for="sort">Sort By:</label>
-            <select id="sort">
+            <label for="sortOptions">Sort by:</label>
+            <select id="sortOptions">
                 <option value="title">Title</option>
                 <option value="author">Author</option>
                 <option value="rating">Rating</option>
             </select>
 
-            <label for="category">Filter By Category:</label>
-            <input type="text" id="category" placeholder="Category">
-        </section>
+            <button id="fetchRemoteButton" disabled>Fetch from API</button>
+            <button id="fetchLocalButton" disabled>Fetch from Local</button>
+        </div>
 
-        <section class="booklist-container">
-            <div class="booklist" id="booklist">
-                <div class="loading" id="loading">Loading . . .</div>
-            </div>
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <button id="nextPage">Next</button>
+        </div>
 
-            <div class="pagination" id="pagination"></div>
-        </section>
-
-        <section class="signup">
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit" class="fetchButton">Sign Up</button>
-                <div id="signup-message"></div>
-            </form>
-        </section>
+        <div id="loading" class="loading" style="display: none;">Loading books...</div>
+        <div class="booklist-container" id="booklist"></div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Sign-up Form -->
+    <div class="signup-form">
+        <h2>Sign up for a Book Browsing</h2>
+        <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="course">Course:</label>
+            <select id="course" required>
+                <option value="web-development">Web Development</option>
+                <option value="data-science">Other</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <div id="formMessage" class="form-message"></div>
+    </div>
 </body>
 </html>
